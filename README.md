@@ -1,5 +1,30 @@
-# react-native-medallia-demo-app
+# Questions
 
+1.  Can you confirm whether removing the below allows you to compile in addition to removing the file pointed out in the arrow and/or adjusting anything else?
+
+- #### Removing `use_frameworks! :linkage => :static`
+
+The source code is compilable if we remove this line. But we couldn't remove it because the Firebase installation requires this config to be enabled
+
+<img width="816" alt="Screen Shot 2023-08-22 at 08 54 00" src="https://github.com/anhkieet/react-native-medallia-demo-app/assets/11927500/a6a10f8e-62b0-4d69-a320-808eec306a00">
+https://rnfirebase.io/#altering-cocoapods-to-use-frameworks
+
+
+- #### Removing `the file pointed out in the arrow`
+
+![Screen Shot 2023-08-17 at 15 01 47](https://github.com/anhkieet/react-native-medallia-demo-app/assets/11927500/41c6b521-8115-473c-b538-5955a058a2ad)
+
+
+The source code is compilable if we remove the file pointed out in the arrow. But it's just a temporary fix in the local where you can do a manual update. We have built an automatical deployment (CircleCI) where the deployment runs on the cloud, and you can't update manually
+
+<img width="1673" alt="Screen Shot 2023-08-22 at 09 07 59" src="https://github.com/anhkieet/react-native-medallia-demo-app/assets/11927500/a64b89d2-12c5-44a1-bd11-2b197b1a4830">
+
+
+2. Are you only seeing a compile issue for iOS? You are not seeing any issues for Android?
+- Yes, the Android one worked well
+
+
+# Problem
 <img width="1512" alt="Screen Shot 2023-08-20 at 16 48 25" src="https://github.com/anhkieet/react-native-medallia-demo-app/assets/11927500/0377283a-cb12-47c6-9e92-ca7e3710209b">
 
 iOS source code cannot compile if I set this config in the Podfile
